@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount ForestLiana::Engine => '/forest'
   devise_for :users
   root to: 'pages#home'
   get '/apps/favorite', to: 'apps#favorite', as: 'favorite_apps'
